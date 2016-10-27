@@ -1,0 +1,3 @@
+#!/bin/sh
+brew update
+brew install curl wget bash-completion git git-extras git-flow rclone sqlite youtube-dl encfs mobile-shell zsh zsh-completions

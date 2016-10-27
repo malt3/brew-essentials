@@ -1,0 +1,3 @@
+#!/bin/sh
+brew update
+brew cask install virtualbox hopper-disassembler dash docker

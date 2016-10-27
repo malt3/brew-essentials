@@ -1,0 +1,3 @@
+#!/bin/sh
+brew update
+brew install gcc gdb ghc erlang go python python3 ruby 

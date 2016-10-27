@@ -1,0 +1,3 @@
+#!/bin/sh
+brew update
+brew cask install google-chrome firefox

@@ -1,0 +1,4 @@
+#!/bin/sh
+brew update
+brew cask install sublime-text macvim atom qt-creator
+
