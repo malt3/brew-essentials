@@ -21,6 +21,6 @@ echo "Enabling brew cask"
 ./brew_packets_cask
 
 brew install $packets_base $packets_programming_languages $packets_programming_tools $packets_programming_utils
-brew cask install $packets_text_editors $packets_browsers $packets_utilities
+brew cask install $packets_text_editors $packets_browsers $packets_utilities $packets_drivers
 
 brew doctor
