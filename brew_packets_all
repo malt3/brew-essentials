@@ -3,22 +3,24 @@
 #
 # Check if Homebrew is installed
 #
+
+source packets
+
 which -s brew
 if [[ $? != 0 ]] ; then
     # Install Homebrew
     # http://brew.sh/
+    echo "Installing homebrew. See http://brew.sh/ for help!"
     /usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 else
+	echo "homebrew is already installed. Updating instead."
     brew update
 fi
 
-./brew_packets_base
+echo "Enabling brew cask"
 ./brew_packets_cask
-./brew_packets_programming_languages
-./brew_packets_programming_tools
-./brew_packets_programming_utils
-./brew_packets_text_editors
-./brew_packets_browsers
-./brew_packets_utilities
+
+brew install $packets_base $packets_programming_languages $packets_programming_tools $packets_programming_utils
+brew cask install $packets_text_editors $packets_browsers $packets_utilities
 
 brew doctor
